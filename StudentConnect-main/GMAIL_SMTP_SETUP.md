@@ -9,7 +9,7 @@
 1. In Google Account settings, go to "Security"
 2. Under "2-Step Verification", click on "App passwords"
 3. Select "Mail" for the app and "Other" for device
-4. Enter "Student Social Platform" as the device name
+4. Enter "Student Social Platform" asthe device name
 5. Click "Generate"
 6. Copy the 16-character app password (format: xxxx xxxx xxxx xxxx)
 
