@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: studentconnect-backend
+    runtime: python3
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install --only-binary=:all: --constraint constraints.txt --no-cache-dir -r requirements.txt
+    startCommand: uvicorn main:app --host=0.0.0.0 --port=$PORT
+    plan: free
+    env: python
+    pythonVersion: 3.11.0
+    region: oregon
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PIP_ONLY_BINARY
+        value: ":all:"
+      - key: PIP_NO_BUILD_ISOLATION
+        value: "false"

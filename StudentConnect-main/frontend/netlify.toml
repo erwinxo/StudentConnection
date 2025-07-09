@@ -1,0 +1,14 @@
+[build]
+  publish = "build"
+  command = "npm install && npm run build"
+  base = "frontend"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  REACT_APP_API_URL = "https://studentconnect-backend-xyz.onrender.com"
+  CI = "false"
+  GENERATE_SOURCEMAP = "false"
